@@ -1,0 +1,10 @@
+/node_modules
+
+.idea/
+.vscode/
+.env
+.env.backup
+.phpunit.result.cache
+npm-debug.log
+yarn-error.log
+.phpstorm.meta.php

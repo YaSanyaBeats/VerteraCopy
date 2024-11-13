@@ -1,0 +1,52 @@
+{
+  "name": "vertera_ticket_system",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.8.8",
+    "@vue/apollo-util": "^4.0.0-beta.6",
+    "axios": "^1.6.7",
+    "bootstrap": "^5.3.2",
+    "cdbreact": "^1.5.18",
+    "date-fns": "^3.3.1",
+    "dotenv": "^16.4.5",
+    "draft-js": "^0.11.7",
+    "draft-js-export-html": "^1.4.1",
+    "draftjs-to-html": "^0.9.1",
+    "franc": "^6.2.0",
+    "graphql": "^16.8.1",
+    "graphql-request": "^6.1.0",
+    "history": "^5.3.0",
+    "json-graphql-server": "^2.3.2",
+    "luxon": "^3.4.4",
+    "material-react-table": "^2.12.1",
+    "mdb-react-ui-kit": "^7.1.0",
+    "multiselect-react-dropdown": "^2.0.25",
+    "primereact": "^10.3.1",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.9.1",
+    "react-chartjs-2": "^5.2.0",
+    "react-charts": "^3.0.0-beta.57",
+    "react-dom": "^18.2.0",
+    "react-draft-wysiwyg": "^1.15.0",
+    "react-router-dom": "^6.21.1",
+    "react-scroll": "^1.9.0",
+    "react-select": "^5.8.0",
+    "rsuite": "^5.45.0"
+  },
+  "devDependencies": {
+    "@types/langdetect": "^0.2.2",
+    "@types/luxon": "^3.4.2",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@vitejs/plugin-react": "^3.1.0",
+    "typescript": "^4.9.3",
+    "vite": "^4.1.0"
+  }
+}

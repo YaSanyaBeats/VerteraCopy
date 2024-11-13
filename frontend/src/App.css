@@ -1,0 +1,35 @@
+@import url('https://fonts.cdnfonts.com/css/tt-norms-pro');
+body {
+    font-family: 'TT Norms Pro', sans-serif;
+    font-weight: 400;
+    color: black;
+}
+
+a {
+    font-family: 'TT Norms Pro', sans-serif;
+}
+
+.container {
+    padding: 0 20px;
+    margin: 0 auto;
+    max-width: 1440px;
+    margin-bottom: 30px;
+}
+
+#ButtonTable {
+    width: 287px;
+    padding: 20px 15px;
+    border-radius: 5px;
+    background: #00AB97;
+    border: none;
+    font-size: 16px;
+    margin-top: 25px;
+}
+
+.inactive-row {
+    background-color: lightgray !important;
+}
+
+.inactive-row td {
+    background-color: lightgray !important;
+}

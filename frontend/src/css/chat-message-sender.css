@@ -1,0 +1,120 @@
+.chat-message-sender__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-bottom: 50px;
+}
+
+.chat-message-sender__box {
+  width: 85%;
+  border-radius: 15px;
+  background: rgba(134, 211, 255, 0.09);
+  padding: 20px;
+}
+
+.chat-message-sender__text {
+  max-width: 1075px;
+  font-family: "TT Norms Pro", sans-serif;
+  font-size: 20px;
+}
+
+.chat-message-sender__time {
+  font-family: "TT Norms Pro", sans-serif;
+  font-size: 15px;
+  color: #5c5c5c;
+  display: block;
+  margin-top: 30px;
+  text-align: right;
+  white-space: pre-wrap;
+}
+
+.chat-message-sender__attachs-title {
+  display: block;
+  margin-top: 20px;
+  font-family: "TT Norms Pro", sans-serif;
+  font-size: 16px;
+}
+
+.chat-message-sender__attachs {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chat-message-sender__attach-link {
+  font-size: 16px;
+  color: rgb(33, 37, 41);
+  text-decoration: none;
+  position: relative;
+}
+
+.chat-message-sender__attach {
+  position: relative;
+}
+
+.chat-message-sender__attach::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -3px;
+  width: 100%;
+  border-bottom: 1px dashed black;
+}
+
+.chat-message-sender__attach-icon {
+  width: 20px;
+  height: 20px;
+  opacity: 0.5;
+  margin-right: 5px;
+}
+
+.chat-message-sender__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.chat-message-sender__name {
+  font-family: "TT Norms Pro", sans-serif;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.chat-message-sender__delete {
+  text-align: right;
+  margin-top: 10px;
+}
+
+.chat-message-deleted__delete-msg {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.chat-message-sender__box-curators-chat {
+  background: rgb(203, 134, 255, 0.3);
+}
+
+@media screen and (max-width: 768px) {
+  .chat-message-sender__container {
+    width: 100%;
+  }
+
+  .chat-message-sender__text {
+    font-size: 17px;
+  }
+
+  .chat-message-sender__box {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .chat-message-sender__time {
+    margin-right: 0;
+  }
+}

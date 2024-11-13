@@ -1,0 +1,41 @@
+.chat-message-system__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 50px;
+}
+
+.chat-message-system__box {
+  text-align: center;
+  border-radius: 15px;
+  background: #f7f7f7;
+  padding: 30px 50px 30px 50px;
+  width: 85%;
+}
+
+.chat-message-system__text {
+  max-width: 100%;
+  font-family: "TT Norms Pro", sans-serif;
+  font-size: 20px;
+}
+
+.chat-message-system__time {
+  font-family: "TT Norms Pro", sans-serif;
+  font-size: 15px;
+  color: #5c5c5c;
+  display: block;
+  margin-top: 15px;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .chat-message-system__container {
+    width: 100%;
+  }
+
+  .chat-message-system__box {
+    width: 100%;
+  }
+}

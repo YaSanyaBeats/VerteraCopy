@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: docker/Dockerfile
+    ports:
+      - "8058:4444"
+    env_file:
+      - ./backend/.env  # Указание файла окружения для backend
+    volumes:
+      - ./backend:/app
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql:8.0
+    ports:
+      - "3306:3306"
+    env_file:
+      - ./backend/.env  # Указание файла окружения для MySQL
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./backend/DB/vertera.sql:/docker-entrypoint-initdb.d/vertera.sql:ro
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: docker/Dockerfile
+    ports:
+      - "8057:80"
+    env_file:
+      - ./frontend/.env  # Указание файла окружения для frontend
+    volumes:
+      - ./frontend:/app
+
+volumes:
+  mysql_data:
