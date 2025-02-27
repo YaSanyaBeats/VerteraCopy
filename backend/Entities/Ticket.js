@@ -430,6 +430,8 @@ class Ticket extends Entity {
             if(curInitiator.role == User.RoleClient){
                 const clientResult = await Client.GetById(ticketFields.initiatorId);
                 const emailText = `Здравствуйте, ${curInitiator.name}! Ваше обращение в техподдержку VERTERA принято в обработку.\nВ ближайшее время вы получите ответ.\n\nОтслеживать статус обращения вы можете по ссылке: ${dialogLink}`;
+                console.log(23536);
+                console.log(clientResult);
                 EmailSender.Notify(clientResult.email, emailText);
             }
 

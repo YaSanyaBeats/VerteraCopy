@@ -136,6 +136,7 @@ function Chat() {
   }
 
   const isAdmin = () => {
+    console.log(user);
     return user.role === "helper" || user.role === "system";
   };
 
@@ -150,6 +151,7 @@ function Chat() {
   };
 
   const clientRequest = () => {
+    console.log('kek');
     return useQuery(MESSAGES_CHAT_CLIENT, {
       variables: {
         token: user.token,
@@ -259,6 +261,7 @@ function Chat() {
   };
 
   useEffect(() => {
+    console.log(isAdmin());
     if (isAdmin()) {
       if (data && data.clientQuery.ticket) {
         setDataLogQuery(data.clientQuery.ticket.log);
@@ -397,7 +400,7 @@ function Chat() {
     return <Loader />;
   }
 
-  if (error || errorCuratorsList || errorThemeList) {
+  if (error || (errorCuratorsList && isAdmin()) || errorThemeList) {
     
     const networkError =
       error?.networkError ??

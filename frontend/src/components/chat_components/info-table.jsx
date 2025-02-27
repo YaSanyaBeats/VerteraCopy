@@ -42,7 +42,7 @@ function InfoTable({ data, currentStatusId }) {
                   data.clientQuery.ticket.initiator.patronymic
                     ? ` ${data.clientQuery.ticket.initiator.patronymic}`
                     : ""
-                } (${data.clientQuery.ticket.initiator.country.name.stroke})`}
+                } (${data?.clientQuery?.ticket?.initiator?.country?.name?.stroke})`}
               </td>
             </tr>
             {currentStatusId !== 6 && (
@@ -58,7 +58,7 @@ function InfoTable({ data, currentStatusId }) {
                       ? ` ${data.clientQuery.ticket.recipient.patronymic}`
                       : ""
                   }  (${
-                    data.clientQuery.ticket.recipient.country.name.stroke
+                    data?.clientQuery?.ticket?.recipient?.country?.name?.stroke
                   })`}
                 </td>
               </tr>

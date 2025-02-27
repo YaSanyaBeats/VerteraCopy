@@ -442,10 +442,11 @@ function allTickets() {
   if (
     error ||
     errorCountryList ||
-    errorCuratorsList ||
-    errorStatusList ||
+    (errorCuratorsList && isAdmin()) ||
+    (errorStatusList && isAdmin()) ||
     errorThemeList
   ) {
+    console.log(error, errorCountryList, errorCuratorsList, errorStatusList, errorThemeList);
     const networkError =
       error?.networkError ??
       errorCountryList?.networkError ??
