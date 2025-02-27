@@ -31,6 +31,8 @@ import "../css/all-tickets.css";
 import "../css/add-curator.css";
 import "rsuite/dist/rsuite-no-reset.min.css";
 
+import NotFoundPage from "./not-found-page";
+
 import get_translation from "../helpers/translation";
 
 function allTickets() {
@@ -445,11 +447,11 @@ function allTickets() {
     errorThemeList
   ) {
     const networkError =
-      error.networkError ??
-      errorCountryList.networkError ??
-      errorCuratorsList.networkError ??
-      errorStatusList.networkError ??
-      errorThemeList.networkError;
+      error?.networkError ??
+      errorCountryList?.networkError ??
+      errorCuratorsList?.networkError ??
+      errorStatusList?.networkError ??
+      errorThemeList?.networkError;
 
     if (networkError) {
       // console.log("Network Error:", networkError);

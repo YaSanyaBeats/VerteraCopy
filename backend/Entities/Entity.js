@@ -34,7 +34,7 @@ class Entity {
         return conn
             .query(sql, fields)
             .then((res) => {
-                console.log("Request Completed");
+                //console.log("Request Completed");
                 return res[0];
             })
             .catch((err) => {
@@ -43,7 +43,7 @@ class Entity {
             })
             .finally(() => {
                 conn.release();
-                console.log("Conn Released");
+                //console.log("Conn Released");
             });
     }
 
@@ -73,7 +73,7 @@ class Entity {
             throw err.code ? new Error(Errors.SQL) : err;
         } finally {
             conn.release();
-            console.log("Conn Released");
+            //console.log("Conn Released");
         }
     }
 }

@@ -28,7 +28,9 @@ Entity.Pool = Pool;
 
 async function Access(role, token){
     const access = await User.AccessAllow(role, token);
+    //console.log(access);
     if(!access.isAllowed) throw new Error(Errors.AccessForbidden);
+    //console.log(access);
     return access.user;
 }
 

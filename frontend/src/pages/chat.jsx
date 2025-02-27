@@ -398,12 +398,12 @@ function Chat() {
   }
 
   if (error || errorCuratorsList || errorThemeList) {
+    
     const networkError =
-      error.networkError ??
-      errorCuratorsList.networkError ??
-      errorThemeList.networkError;
-
-    if (!isAdmin() && error.message === "Forbidden") {
+      error?.networkError ??
+      errorCuratorsList?.networkError ??
+      errorThemeList?.networkError;
+    if (!isAdmin() && error?.message === "Forbidden") {
       return <NotFoundPage />;
     }
 

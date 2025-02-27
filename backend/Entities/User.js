@@ -138,8 +138,11 @@ class User extends Entity {
     }
 
     static async AccessAllow(level, token) {
+        
         const user = await this.GetByToken(token);
+        
         const isAllowed = this.ValidateRoleAccess(level, user.role);
+        //console.log(isAllowed);
         return { user, isAllowed };
     }
 

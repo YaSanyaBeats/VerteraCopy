@@ -51,7 +51,7 @@ if (!isBuild) {
             return console.log(err);
         }
 
-        console.log('Server started');
+        console.log('Server started on port: ' + port);
     });
 }
 else {
